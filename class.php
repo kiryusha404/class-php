@@ -1,5 +1,5 @@
 <?php
-class airport
+class Airport
 {
     public $quantity = 0;
 
@@ -24,9 +24,9 @@ class airport
     }
 }
 
-$airport = new aitport;
+$airport = new Aitport;
 
-abstract class plane extends airport
+abstract class Plane extends Airport
 {
     public $name_plane;
     public $max_speed;
@@ -38,7 +38,7 @@ abstract class plane extends airport
     abstract protected function set_max_speed($speed);
 }
 
-class MIG extends plane
+class MIG extends Plane
 {
 
     public function takeoff($airport) {
