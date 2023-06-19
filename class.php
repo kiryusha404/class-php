@@ -13,6 +13,7 @@ abstract class Plane{
 
     abstract protected function takeoff();
     abstract protected function landing();
+    abstract protected function get_status();
 }
 
 class MIG extends Plane
@@ -27,28 +28,37 @@ class MIG extends Plane
     }
 
     public function takeoff(){ //Функция взлёта с проверкой летит ли самолёт
+        echo $this->name_plane;
         if($this->height == 0){
             $this->height += 1;
-            echo $this->name_plane;
             echo ': the plane took off';
             echo '</br>';
         }
         else{
-            echo $this->name_plane;
             echo ': the plane is already flying';
             echo '</br>';
         }
     }
     public function landing(){ //Функция посадки с проверкой летит ли самолёт
+        echo $this->name_plane;
         if($this->height = 1){
             $this->height -= 1;
-            echo $this->name_plane;
             echo ': the plane landed';
             echo '</br>';
         }
         else{
-            echo $this->name_plane;
             echo ': the plane is already on the ground';
+            echo '</br>';
+        }
+    }
+    public function get_status(){ // Фунция узнаёт статус самолёта
+        echo $this->name_plane;
+        if($this->height == 0){
+            echo ': the plane is on the ground';
+            echo '</br>';
+        }
+        else{
+            echo ': the plane is flying';
             echo '</br>';
         }
     }
@@ -61,28 +71,37 @@ class TY_154 extends Plane
     }
 
     public function takeoff(){ //Функция взлёта с проверкой летит ли самолёт
+        echo $this->name_plane;
         if($this->height == 0){
             $this->height += 1;
-            echo $this->name_plane;
             echo ': the plane took off';
             echo '</br>';
         }
         else{
-            echo $this->name_plane;
             echo ': the plane is already flying';
             echo '</br>';
         }
     }
     public function landing(){ //Функция посадки с проверкой летит ли самолёт
+        echo $this->name_plane;
         if($this->height = 1){
             $this->height -= 1;
-            echo $this->name_plane;
             echo ': the plane landed';
             echo '</br>';
         }
         else{
-            echo $this->name_plane;
             echo ': the plane is already on the ground';
+            echo '</br>';
+        }
+    }
+    public function get_status(){ // Фунция узнаёт статус самолёта
+        echo $this->name_plane;
+        if($this->height == 0){
+            echo ': the plane is on the ground';
+            echo '</br>';
+        }
+        else{
+            echo ': the plane is flying';
             echo '</br>';
         }
     }
@@ -93,4 +112,5 @@ $MIG1->takeoff();
 $MIG1->takeoff();
 $MIG1->attack();
 $MIG1->landing();
+$MIG1->get_status();
 ?>
