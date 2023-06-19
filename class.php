@@ -41,7 +41,7 @@ class MIG extends Plane
     }
     public function landing(){ //Функция посадки с проверкой летит ли самолёт
         echo $this->name_plane;
-        if($this->height = 1){
+        if($this->height == 1){
             $this->height -= 1;
             echo ': the plane landed';
             echo '</br>';
@@ -84,7 +84,7 @@ class TY_154 extends Plane
     }
     public function landing(){ //Функция посадки с проверкой летит ли самолёт
         echo $this->name_plane;
-        if($this->height = 1){
+        if($this->height == 1){
             $this->height -= 1;
             echo ': the plane landed';
             echo '</br>';
